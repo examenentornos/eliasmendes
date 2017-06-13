@@ -44,11 +44,11 @@ public class ExamenElias {
 			// codigo:
 			codigo = sc.nextInt(); // leer codigo
 			if (codigo <= 0 || codigo >= 1000) {
-				System.out.println("codigo: " + codigo);
+				System.out.println("codigo: Incorrecto " + codigo);
 				throw new RuntimeException();
 			} else {
 
-				System.out.println("codigo: incorrecto ");
+				System.out.println("codigo:  " + codigo);
 			}
 
 			// nombre
@@ -68,8 +68,8 @@ public class ExamenElias {
 			if (antiguedad < 0 || antiguedad >= 100)
 				throw new RuntimeException();
 			else {
-				System.out.println("Antiguedad incorrecta, [00,99]");
-				antiguedad = 0;
+				System.out.println("Antiguedad ->"+ antiguedad);
+				;
 			}
 
 			// Plus y Casos de complemento:
@@ -78,7 +78,7 @@ public class ExamenElias {
 			System.out.println("plus: " + plus + "\n");
 			if (plus.equalsIgnoreCase("SI") || (plus.equalsIgnoreCase("NO"))) {
 
-				if (antiguedad < 5 && plus.equalsIgnoreCase("NO"))
+				if (antiguedad >= 5 && plus.equalsIgnoreCase("SI"))
 					resultadoComplemento = COMPLEMENTO1;
 				else if (antiguedad >= 5 && plus.equalsIgnoreCase("NO"))
 					resultadoComplemento = COMPLEMENTO2;
